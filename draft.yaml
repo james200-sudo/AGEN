@@ -1,0 +1,47 @@
+models:
+  Enseignant:
+    nom: string:50
+    prenom: string:50
+    sexe: enum:Masculin,Feminin
+    fonction: longtext
+    matricule: string:100 nullable
+    email: string:100 nullable
+    contact1: string:15
+    content2: string:15
+  Classe:
+    nom: string:50
+    capacite: integer:100
+  Cours:
+    libelle: string:50
+    coef: integer:10 nullable
+  EnseignantUneClasse:
+    coursprogrammer_id: id foreign
+    jour: string:80
+    debut: string:50
+    fin: string:50
+  CoursProgrammer:
+    classe_id: id foreign
+    cours_id: id foreign
+    duree: string:50
+
+  fichepresence:
+    jour:
+    debut:
+    fin:
+    eleve_id:
+
+
+  Eleve:
+    nom: string:50
+    prenom: string:50
+    sexe: enum:Masculin,Feminin
+    date_naissance: string:15
+    lieu_naissance: string:50
+    matricule: string:100 nullable
+    email: string:100 nullable
+    contact1: string:15
+    content2: string:15
+
+
+
+
